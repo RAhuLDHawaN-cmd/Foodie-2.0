@@ -83,3 +83,29 @@ td , th , tr{
   background-size: cover !important;
   height:90vh;
 }
+
+
+.homeback{
+  background-image: url('./images//heroPizza.png');
+  background-repeat: no-repeat !important;
+  /* background-size: fill !important; */
+  height:50rem;
+}
+
+.waviy {
+  position: relative;
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(.2s * var(--i))
+}
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}

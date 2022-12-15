@@ -10,8 +10,11 @@ export default function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-white rounded" >
-        <a className="navbar-brand mx-auto" href="/" style={{fontFamily:'Oswald'}} >
-          Pizza Chezza
+        <a className="navbar-brand mx-auto" href="/" style={{fontFamily:'Oswald',fontSize:"25px"}} >
+          Pizza Chezza 
+          <img src="https://media.istockphoto.com/id/1021291250/vector/cheesy-monster-chef-character-with-pizza-vector-mascot-for-pizzeria.jpg?s=612x612&w=is&k=20&c=Zk5vBN2Sw8GKZLNa0KqJyj-w1XsS2Vdd7IEoCIjXyCs=" style={{width:"50px", height:"40px"}}>
+
+          </img>
         </a>
         <button
           className="navbar-toggler"
