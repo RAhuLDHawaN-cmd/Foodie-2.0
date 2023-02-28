@@ -1,7 +1,7 @@
 const express = require("express");
-
+require("dotenv").config();
 const Pizza = require('./models/pizzaModel')
-
+const cors = require("cors");
 const app = express();
 const db = require("./db.js")
 app.use(express.json());
@@ -10,6 +10,9 @@ const pizzasRoute = require('./routes/pizzasRoute')
 const userRoute = require('./routes/userRoute')
 const ordersRoute = require('./routes/ordersRoute')
 
+const PORT = process.env.PORT || 8000;
+app.use(cors());
+app.use(express.json());
 app.use('/api/pizzas/', pizzasRoute)
 app.use('/api/users/' , userRoute)
 app.use('/api/orders/' , ordersRoute)
@@ -26,11 +29,6 @@ if(process.env.NODE_ENV ==='production')
     })
 }
 
-
-
-
-
-
-const port = process.env.PORT || 8000;
-
-app.listen(port, () => console.log("Server running"));
+app.listen(PORT,()=>{
+    console.log(`Server start at port no ${PORT}`)
+})
